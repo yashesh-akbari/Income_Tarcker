@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Income Tracker</h1>
+
+    <section class="form-section">
+      <h2>Add Income</h2>
+      <form id="income-form">
+        <input type="number" id="amount" placeholder="Amount in INR" required />
+        <input type="text" id="source" placeholder="Source" required />
+        <input type="date" id="date" required />
+        <button type="submit">Add Income</button>
+      </form>
+    </section>
+
+    <section class="target-section">
+      <h2>Set Monthly Target</h2>
+      <input type="number" id="target" placeholder="Target Amount in INR" />
+      <input type="date" id="target-date" required />
+      <button onclick="setTarget()">Set Target</button>
+      <p id="target-display"></p>
+      <p id="remaining-display"></p>
+      <p id="days-left-display"></p>
+    </section>
+
+    <section class="summary-section">
+      <h2>Total This Month: ₹<span id="total-monthly">0</span></h2>
+    </section>
+
+    <section class="list-section">
+      <h2>Income List</h2>
+      <ul id="income-list"></ul>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
